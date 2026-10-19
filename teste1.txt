@@ -1,4 +1,4 @@
-hello world // alteracao da branch halloween
+hello world // alteracao da branch halloween // forcei um conflito
 
 
 alteracao de modificacao
