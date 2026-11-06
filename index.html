@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        :root {
+            --primaria: #6366f1;
+            --secundaria: #8b5cf6;
+            --destaque: #ec4899;
+            --clara: #f8fafc;
+            --escura: #1e293b;
+            --sombra: 0 10px 40px rgba(99, 102, 241, 0.15);
+        }
+
+        body {
+            background: linear-gradient(135deg, #eef2ff 0%, #fdf4ff 100%);
+            min-height: 100vh;
+            color: var(--escura);
+            line-height: 1.7;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .nav-conteudo {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--escura);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primaria);
+        }
+
+        header {
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primaria), var(--destaque));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            animation: aparecer 1s ease-out;
+        }
+
+        .subtitulo {
+            font-size: 1.3rem;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+            animation: aparecer 1s ease-out 0.2s both;
+        }
+
+        .botoes {
+            animation: aparecer 1s ease-out 0.4s both;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .botao-principal {
+            background: linear-gradient(135deg, var(--primaria), var(--secundaria));
+            color: white;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        .botao-principal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+        }
+
+        .botao-secundario {
+            background: white;
+            color: var(--primaria);
+            border: 2px solid var(--primaria);
+        }
+
+        .botao-secundario:hover {
+            background: var(--primaria);
+            color: white;
+        }
+
+        .sobre {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .cartao {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--sombra);
+            transition: transform 0.3s ease;
+        }
+
+        .cartao:hover {
+            transform: translateY(-8px);
+        }
+
+        .cartao h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primaria);
+        }
+
+        .icones {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: var(--escura);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 2rem;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .nav-links a { margin-left: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-conteudo">
+            <div class="logo">✨</div>
+            <div class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio">
+        <h1>Bem-vindo ao Meu Espaço Online</h1>
+        <p class="subtitulo">Design moderno, elegante e adaptado para todos os ecrãs. 💜</p>
+        <div class="botoes">
+            <a href="#sobre" class="botao botao-principal">Explorar</a>
+            <a href="#contacto" class="botao botao-secundario">Falar Comigo</a>
+        </div>
+    </header>
+
+    <section class="sobre" id="sobre">
+        <div class="cartao">
+            <div class="icones">🎨</div>
+            <h3>Design</h3>
+            <p>Cores suaves, sombras elegantes e animações suaves. Um visual profissional que impressiona à primeira vista.</p>
+        </div>
+
+        <div class="cartao">
+            <div class="icones">📱</div>
+            <h3>Para Todos os Ecrãs</h3>
+            <p>Funciona perfeitamente no telemóvel, tablet e computador. O design adapta-se sempre da melhor forma.</p>
+        </div>
+
+        <div class="cartao">
+            <div class="icones">⚡</div>
+            <h3>Rápido e Simples</h3>
+            <p>Código leve e sem complicações. Copia, cola, altera os textos e já tens o teu site publicado!</p>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <h3>Entre em Contacto</h3>
+        <p style="margin: 1rem 0;">email@exemplo.pt | São João da Madeira, Portugal 🇵🇹</p>
+        <p style="margin-top: 2rem; opacity: 0.7; font-size: 0.9rem;">
+            &copy; 2026 Meu Site Bonito — Feito com 💜
+        </p>
+    </footer>
+
+</body>
+</html>
